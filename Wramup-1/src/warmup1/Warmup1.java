@@ -13,33 +13,24 @@ public class Warmup1 {
                 true if you sleep in today.\n
                 """);
         Scanner scanner = new Scanner(System.in);
+
+        String country;
+
         System.out.println("""
-                Choose the number that represents your country's time zone or the one nearest to it:
-                        ACT - Australia/Darwin
-                        AET - Australia/Sydney
-                        AGT - America/Argentina/Buenos_Aires
-                        ART - Africa/Cairo
-                        AST - America/Anchorage
-                        BET - America/Sao_Paulo
-                        BST - Asia/Dhaka
-                        CAT - Africa/Harare
-                        CNT - America/St_Johns
-                        CST - America/Chicago
-                        CTT - Asia/Shanghai
-                        EAT - Africa/Addis_Ababa
-                        ECT - Europe/Paris
-                        IET - America/Indiana/Indianapolis
-                        IST - Asia/Kolkata
-                        JST - Asia/Tokyo
-                        MIT - Pacific/Apia
-                        NET - Asia/Yerevan
-                        NST - Pacific/Auckland
-                        PLT - Asia/Karachi
-                        PNT - America/Phoenix
-                        PRT - America/Puerto_Rico
-                        PST - America/Los_Angeles
-                        SST - Pacific/Guadalcanal
-                        VST - Asia/Ho_Chi_Minh
+                Choose the number that represents your country's time zone or the one nearest to it:   
+                        1 - Africa/Cairo
+                        2 - America/Chicago                        
+                        3 - America/Los_Angeles
+                        4 - America/Puerto_Rico
+                        5 - America/Sao_Paulo
+                        6 - Asia/Dhaka                        
+                        7 - Asia/Ho_Chi_Minh
+                        8 - Asia/Shanghai
+                        9 - Asia/Tokyo
+                        10 - Australia/Sydney                        
+                        11 - Europe/Paris                                                
+                        12 - Pacific/Auckland
+                        13 - Pacific/Guadalcanal                        
                 """);
 
         //Shows the day and time at the moment the program is executed
