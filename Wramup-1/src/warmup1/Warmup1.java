@@ -14,24 +14,18 @@ public class Warmup1 {
                 """);
         Scanner scanner = new Scanner(System.in);
 
-        String country;
+        int zone;
 
         System.out.println("""
-                Choose the number that represents your country's time zone or the one nearest to it:   
-                        1 - Africa/Cairo
-                        2 - America/Chicago                        
-                        3 - America/Los_Angeles
-                        4 - America/Puerto_Rico
-                        5 - America/Sao_Paulo
-                        6 - Asia/Dhaka                        
-                        7 - Asia/Ho_Chi_Minh
-                        8 - Asia/Shanghai
-                        9 - Asia/Tokyo
-                        10 - Australia/Sydney                        
-                        11 - Europe/Paris                                                
-                        12 - Pacific/Auckland
-                        13 - Pacific/Guadalcanal                        
+                Choose the number corresponding to the continent in which your country is located:   
+                          1 - North America (America/Chicago)
+                          2 - South America (America/Sao_Paulo)
+                          3 - Europe (Europe/Paris)
+                          4 - Africa (Africa/Cairo)
+                          5 - Asia (Asia/Shanghai)
+                          6 - Oceania (Australia/Sydney)                       
                 """);
+        zone = scanner.nextInt();
 
         //Shows the day and time at the moment the program is executed
         String dateTime = ZonedDateTime.now(ZoneId.of("America/Sao_Paulo")).
