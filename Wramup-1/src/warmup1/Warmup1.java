@@ -15,6 +15,7 @@ public class Warmup1 {
         Scanner scanner = new Scanner(System.in);
 
         int zone;
+        String zoneId;
 
         System.out.println("""
                 Choose the number corresponding to the continent in which your country is located:   
@@ -26,6 +27,23 @@ public class Warmup1 {
                           6 - Oceania (Australia/Sydney)                       
                 """);
         zone = scanner.nextInt();
+
+        switch (zone){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            default:
+                System.out.println("Invalid number");
+        }
 
         //Shows the day and time at the moment the program is executed
         String dateTime = ZonedDateTime.now(ZoneId.of("America/Sao_Paulo")).
