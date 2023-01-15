@@ -10,12 +10,13 @@ public class Warmup1 {
         System.out.println("""
                 Suppose you are a teacher. The parameter weekday is true if it is a weekday, and the parameter vacation 
                 is true if you are on vacation. Teachers sleep in if it is not a weekday or they're on vacation. Return 
-                true if you sleep in today.\n
+                true if you sleep in today (The code shows the day and time at the moment of it's execution).\n
                 """);
         Scanner scanner = new Scanner(System.in);
 
         int zone;
         String zoneId;
+        String dateTime;
 
         System.out.println("""
                 Select the most appropriate number, considering the location of your country in relation to the Equator.
@@ -33,33 +34,51 @@ public class Warmup1 {
         switch (zone){
             case 1:
                 zoneId = "America/Chicago";
+                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
+                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 2:
                 zoneId = "America/Sao_Paulo";
+                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
+                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 3:
                 zoneId = "Europe/Paris";
+                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
+                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 4:
                 zoneId = "Africa/Cairo";
+                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
+                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 5:
                 zoneId = "Africa/Harare";
+                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
+                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 6:
                 zoneId = "Asia/Shanghai";
+                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
+                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 7:
                 zoneId = "Australia/Sydney";
+                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
+                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                System.out.println("\nDay and time now: " + dateTime);
                 break;
             default:
                 System.out.println("Invalid number");
         }
 
-        //Shows the day and time at the moment the program is executed
-        String dateTime = ZonedDateTime.now(ZoneId.of("America/Sao_Paulo")).
-                format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
-        System.out.println("\nDay and time now: " + dateTime);
+
 
         boolean isWeekday = false;
         boolean isVacation = false;
