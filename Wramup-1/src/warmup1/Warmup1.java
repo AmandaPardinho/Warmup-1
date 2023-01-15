@@ -1,5 +1,6 @@
 package warmup1;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -20,6 +21,8 @@ public class Warmup1 {
         int zone;
         String zoneId;
         String dateTime;
+        LocalDateTime day;
+
 
         System.out.println("""
                 Select the most appropriate number, considering the location of your country in relation to the Equator.
@@ -37,8 +40,9 @@ public class Warmup1 {
         switch (zone){
             case 1:
                 zoneId = "America/Chicago";
-                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
-                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                dateTime = String.valueOf(ZonedDateTime.now(ZoneId.of(zoneId))).
+                        format(String.valueOf(DateTimeFormatter.ofPattern("\nYYYY/MM/DD")));
+                day = LocalDateTime.of(dateTime).getDayOfWeek().name();
                 System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 2:
@@ -75,6 +79,7 @@ public class Warmup1 {
                 zoneId = "Australia/Sydney";
                 dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
                         format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+
                 System.out.println("\nDay and time now: " + dateTime);
                 break;
             default:
@@ -86,6 +91,8 @@ public class Warmup1 {
         boolean isWeekday = false;
         boolean isVacation = false;
         boolean sleepIn = false;
+
+
 
     }
 }
