@@ -18,13 +18,15 @@ public class Warmup1 {
         String zoneId;
 
         System.out.println("""
-                Choose the number corresponding to the continent in which your country is located:   
+                Select the most appropriate number, considering the location of your country in relation to the Equator.
+                Choose the continent that most closely matches your actual location:   
                           1 - North America (America/Chicago)
                           2 - South America (America/Sao_Paulo)
                           3 - Europe (Europe/Paris)
                           4 - Africa (Africa/Cairo)
-                          5 - Asia (Asia/Shanghai)
-                          6 - Oceania (Australia/Sydney)                       
+                          5 - Africa (Africa/Harare)
+                          6 - Asia (Asia/Shanghai)
+                          7 - Oceania (Australia/Sydney)                       
                 """);
         zone = scanner.nextInt();
 
