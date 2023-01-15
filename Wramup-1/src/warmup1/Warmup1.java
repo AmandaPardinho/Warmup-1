@@ -20,32 +20,39 @@ public class Warmup1 {
         System.out.println("""
                 Select the most appropriate number, considering the location of your country in relation to the Equator.
                 Choose the continent that most closely matches your actual location:   
-                          1 - North America (America/Chicago)
-                          2 - South America (America/Sao_Paulo)
-                          3 - Europe (Europe/Paris)
-                          4 - Africa (Africa/Cairo)
-                          5 - Africa (Africa/Harare)
-                          6 - Asia (Asia/Shanghai)
-                          7 - Oceania (Australia/Sydney)                       
+                          1 - North America;
+                          2 - South America; 
+                          3 - Europe; 
+                          4 - Northern Africa Region;
+                          5 - Southern Africa Region; 
+                          6 - Asia; 
+                          7 - Oceania.                       
                 """);
         zone = scanner.nextInt();
 
         switch (zone){
             case 1:
+                zoneId = "America/Chicago";
                 break;
             case 2:
+                zoneId = "America/Sao_Paulo";
                 break;
             case 3:
+                zoneId = "Europe/Paris";
                 break;
             case 4:
+                zoneId = "Africa/Cairo";
                 break;
             case 5:
+                zoneId = "Africa/Harare";
                 break;
             case 6:
+                zoneId = "Asia/Shanghai";
+                break;
+            case 7:
+                zoneId = "Australia/Sydney";
                 break;
             default:
-            case 7:
-                break;
                 System.out.println("Invalid number");
         }
 
