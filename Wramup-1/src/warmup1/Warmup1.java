@@ -44,6 +44,8 @@ public class Warmup1 {
             case 6:
                 break;
             default:
+            case 7:
+                break;
                 System.out.println("Invalid number");
         }
 
