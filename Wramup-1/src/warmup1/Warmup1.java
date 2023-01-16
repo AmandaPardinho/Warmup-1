@@ -108,8 +108,8 @@ public class Warmup1 {
                 System.out.println("Go sleep! Tomorrow you have classes!");
             }
         }else{
-            sleepIn = false;
-            System.out.println("Go sleep! Tomorrow you have classes!");
+            sleepIn = true;
+            System.out.println("It's weekend!");
         }
     }
 }
