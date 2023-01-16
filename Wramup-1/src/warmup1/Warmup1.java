@@ -1,6 +1,9 @@
 package warmup1;
 
+import java.text.DateFormat.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Scanner;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -47,8 +50,8 @@ public class Warmup1 {
             case 1:
                 zoneId = "America/Chicago";
                 dateTime = String.valueOf(ZonedDateTime.now(ZoneId.of(zoneId))).
-                        format(String.valueOf(DateTimeFormatter.ofPattern("\nYYYY/MM/DD")));
-                day = LocalDateTime.of(dateTime).getDayOfWeek().name();
+                        format(String.valueOf(DateTimeFormatter.ofPattern("\ndd-MM-yyyy\nhh:mm:ss a")));
+                //day = LocalDateTime.of(dateTime).getDayOfWeek().name();
                 System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 2:
@@ -62,25 +65,27 @@ public class Warmup1 {
                 month = scanner.nextInt();
                 System.out.println("Enter the day:");
                 day = scanner.nextInt();
-                weekDay = LocalDateTime.of(year, month, day, null, null).getDayOfWeek().name();
+                //weekDay = LocalDateTime.of(year, month, day, null, null).getDayOfWeek().name();
                 break;
             case 3:
                 zoneId = "Europe/Paris";
                 dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
-                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                        format(DateTimeFormatter.ofPattern("\ndd-MM-yyyy\nhh:mm:ss a"));
                 System.out.println("\nDay and time now: " + dateTime);
                 break;
             case 4:
                 zoneId = "Africa/Cairo";
                 dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
-                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                        format(DateTimeFormatter.ofPattern("\ndd-MM-yyyy"));
                 System.out.println("\nDay and time now: " + dateTime);
+                weekDay = new SimpleDateFormat(("EEEE")).format(dateTime);
                 break;
             case 5:
                 zoneId = "Africa/Harare";
-                dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
-                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                dateTime = String.valueOf(ZonedDateTime.now(ZoneId.of(zoneId)));//.
+                        //format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
                 System.out.println("\nDay and time now: " + dateTime);
+                LocalDateTime dtWeek = LocalDateTime.of(dateTime);
                 break;
             case 6:
                 zoneId = "Asia/Shanghai";
@@ -91,7 +96,7 @@ public class Warmup1 {
             case 7:
                 zoneId = "Australia/Sydney";
                 dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
-                        format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
+                        format(DateTimeFormatter.ofPattern("\ndd-MM-yyyy\nhh:mm:ss a"));
 
                 System.out.println("\nDay and time now: " + dateTime);
                 break;
