@@ -18,10 +18,16 @@ public class Warmup1 {
                 """);
         Scanner scanner = new Scanner(System.in);
 
+        boolean isWeekDay = false;
+        boolean isVacation = false;
+        boolean sleepIn = false;
         int zone;
+        int year;
+        int month;
+        int day;
         String zoneId;
         String dateTime;
-        LocalDateTime day;
+        String weekDay;
 
 
         System.out.println("""
@@ -50,6 +56,13 @@ public class Warmup1 {
                 dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
                         format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
                 System.out.println("\nDay and time now: " + dateTime);
+                System.out.println("Enter the year:");
+                year = scanner.nextInt();
+                System.out.println("Enter the number of month:");
+                month = scanner.nextInt();
+                System.out.println("Enter the day:");
+                day = scanner.nextInt();
+                weekDay = LocalDateTime.of(year, month, day, null, null).getDayOfWeek().name();
                 break;
             case 3:
                 zoneId = "Europe/Paris";
@@ -86,13 +99,14 @@ public class Warmup1 {
                 System.out.println("Invalid number");
         }
 
-
-
-        boolean isWeekday = false;
-        boolean isVacation = false;
-        boolean sleepIn = false;
-
-
-
+        if(isWeekDay == true){
+            if(isVacation == true){
+                sleepIn = true;
+                System.out.println("It's vacation time!");
+            }else {
+                sleepIn = false;
+                System.out.println("Go sleep! Tomorrow you have classes!");
+            }
+        }
     }
 }
