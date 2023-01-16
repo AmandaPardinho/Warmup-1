@@ -1,9 +1,9 @@
 package warmup1;
 
-import java.text.DateFormat.*;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
 import java.time.LocalDateTime;
-import java.util.Date;
+import java.time.temporal.TemporalQuery;
 import java.util.Scanner;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -30,7 +30,7 @@ public class Warmup1 {
         int day;
         String zoneId;
         String dateTime;
-        String weekDay;
+        boolean weekend;
 
 
         System.out.println("""
@@ -70,22 +70,27 @@ public class Warmup1 {
             case 3:
                 zoneId = "Europe/Paris";
                 dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
-                        format(DateTimeFormatter.ofPattern("\ndd-MM-yyyy\nhh:mm:ss a"));
-                System.out.println("\nDay and time now: " + dateTime);
+                        format(DateTimeFormatter.ofPattern("\ndd-MM-yyyy\nhh:mm:ss a\n"));
+                TemporalQuery<Boolean> fds = t -> {
+                    DayOfWeek dow = DayOfWeek.from(t);
+                    return dow == DayOfWeek.SATURDAY || dow == DayOfWeek.SUNDAY;
+                };
+                weekend = ZonedDateTime.now().query(fds);
+                System.out.println("\nDay and time now: " + dateTime + weekend);
                 break;
             case 4:
                 zoneId = "Africa/Cairo";
                 dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
                         format(DateTimeFormatter.ofPattern("\ndd-MM-yyyy"));
                 System.out.println("\nDay and time now: " + dateTime);
-                weekDay = new SimpleDateFormat(("EEEE")).format(dateTime);
+                //weekend = new SimpleDateFormat(("EEEE")).format(dateTime);
                 break;
             case 5:
                 zoneId = "Africa/Harare";
                 dateTime = String.valueOf(ZonedDateTime.now(ZoneId.of(zoneId)));//.
                         //format(DateTimeFormatter.ofPattern("\ndd.MM.yyyy\nhh:mm:ss a"));
                 System.out.println("\nDay and time now: " + dateTime);
-                LocalDateTime dtWeek = LocalDateTime.of(dateTime);
+                //LocalDateTime dtWeek = LocalDateTime.of(dateTime);
                 break;
             case 6:
                 zoneId = "Asia/Shanghai";
