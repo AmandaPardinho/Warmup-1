@@ -107,6 +107,9 @@ public class Warmup1 {
                 sleepIn = false;
                 System.out.println("Go sleep! Tomorrow you have classes!");
             }
+        }else{
+            sleepIn = false;
+            System.out.println("Go sleep! Tomorrow you have classes!");
         }
     }
 }
