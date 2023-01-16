@@ -1,2 +1,4 @@
-package warmup1;public class Vacation {
+package warmup1;
+
+public class Vacation {
 }
