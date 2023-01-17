@@ -20,41 +20,13 @@ public class Warmup1 {
                 in December and January and short vacations in July.\n
                 """);
 
-        Scanner scanner = new Scanner(System.in);
-        int zone;
-
-        System.out.println("""
-                Select the most appropriate number, considering the location of your country in relation to the Equator.
-                Choose the continent that most closely matches your actual location:   
-                          1 - North America;
-                          2 - South America; 
-                          3 - Europe; 
-                          4 - Northern Africa Region;
-                          5 - Southern Africa Region; 
-                          6 - Asia; 
-                          7 - Oceania.                       
-                """);
-        zone = scanner.nextInt();
-
-        switch (zone){
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            default:
-                System.out.println("Invalid number");
-        }
-
-
+        /*List<> time = new ArrayList<>();
+        * adicionar cada fuso na lista
+        *
+        *
+        *
+        *
+        *
+        * */
     }
 }
