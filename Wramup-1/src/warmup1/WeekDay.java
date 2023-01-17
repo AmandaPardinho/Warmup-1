@@ -32,6 +32,9 @@ public class WeekDay {
 
     public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public void showDateNow(String zoneId){
         dateTime = ZonedDateTime.now(ZoneId.of(zoneId)).
                 format(DateTimeFormatter.ofPattern("\ndd-MM-yyyy\nhh:mm:ss a"));
         System.out.println(dateTime);
